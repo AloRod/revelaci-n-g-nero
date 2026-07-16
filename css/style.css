@@ -891,7 +891,7 @@ MÓVIL
 .leavesLeft,
 .leavesRight{
 
-width:150px;
+width:250px;
 
 }
   .footer-wrapper{
@@ -948,10 +948,7 @@ font-size:65px;
 padding:25px;
 
 }
-html, body {
-    width:100%;
-    min-height:100%;
-}
+
 
 #invitation {
     min-height:100vh;

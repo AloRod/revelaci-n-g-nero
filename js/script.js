@@ -239,8 +239,6 @@ Hola 🤎🧸
 
 Confirmo que SÍ asistiré a la revelación de sexo.
 
-Estoy muy feliz de acompañarlos en este momento tan especial.
-
 `;
 
 
@@ -269,8 +267,6 @@ Hola 🤎
 Muchas gracias por la invitación.
 
 Lamentablemente NO podré asistir a la revelación de sexo.
-
-Les deseo lo mejor en esta hermosa etapa 🧸
 
 `;
 
