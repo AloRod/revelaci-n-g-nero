@@ -1,0 +1,939 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+       min-height:100vh;
+
+    background-image:url("../assets/fondo2.png");
+
+    background-repeat:no-repeat;
+
+    background-position:center center;
+
+    background-size:cover;
+
+    background-attachment:scroll;
+
+    font-family:'Poppins', sans-serif;
+
+    color:#5C4A3D;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ==========================
+DECORACIÓN
+========================== */
+
+
+.leavesLeft,
+.leavesRight{
+
+    position:fixed;
+
+    width:240px;
+
+    opacity:.25;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+
+.leavesLeft{
+
+    left:-30px;
+
+    bottom:-20px;
+
+}
+
+
+
+.leavesRight{
+
+    right:-30px;
+
+    top:-20px;
+
+    transform:rotate(180deg);
+
+}
+
+
+
+.stars{
+
+    position:fixed;
+
+    top:40px;
+
+    right:50px;
+
+    width:130px;
+
+    opacity:.35;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================
+PANTALLA INICIAL
+========================== */
+
+
+#welcome{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(248,244,238,.80);
+
+    backdrop-filter:blur(4px);
+
+    z-index:100;
+
+}
+
+
+
+.welcome-card{
+
+    width:90%;
+
+    max-width:430px;
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 50px rgba(92,74,61,.15);
+
+    animation:entrada 1s ease;
+
+}
+
+
+
+.bear{
+
+    width:260px;
+
+    max-width:100%;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.small{
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    color:#A38B75;
+
+}
+
+
+
+.welcome-card h1{
+
+    margin:20px 0;
+
+    font-family:'Cormorant Garamond';
+
+    font-size:45px;
+
+    color:#6B5545;
+
+}
+
+
+
+.textWelcome{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#8B7355;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* BOTONES */
+
+
+button{
+
+    font-family:'Poppins';
+
+}
+
+
+
+#enterButton,
+#confirmButton{
+
+
+    background:#B99A7A;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+#enterButton:hover,
+#confirmButton:hover{
+
+    background:#9E7E5C;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+/* ==========================
+INVITACIÓN
+========================== */
+
+
+#invitation{
+
+    display:none;
+
+    width:100%;
+
+    max-width:950px;
+
+    margin:auto;
+
+    padding:60px 20px;
+
+    animation:fade .8s ease;
+
+}
+
+
+
+.hero{
+
+    text-align:center;
+
+}
+
+
+
+
+
+.heroImage{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.heroBear{
+
+    width:320px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.hero h2{
+
+    margin-top:20px;
+
+    font-family:'Cormorant Garamond';
+
+    font-size:38px;
+
+    font-weight:600;
+
+}
+
+
+
+.text{
+
+    margin:20px auto;
+
+    max-width:600px;
+
+    line-height:1.8;
+
+    color:#806B58;
+
+}
+
+
+
+
+.question{
+
+
+    margin-top:20px;
+
+
+    font-family:'Great Vibes', cursive;
+
+
+    font-size:90px;
+
+
+    color:#A67C52;
+
+
+    font-weight:normal;
+
+
+    text-shadow:
+
+    2px 3px 10px rgba(0,0,0,.10);
+
+
+}
+
+
+
+.question::after{
+
+
+    content:"";
+
+
+    display:block;
+
+
+    width:120px;
+
+
+    height:2px;
+
+
+    background:#D6BFA8;
+
+
+    margin:15px auto;
+
+
+}
+
+
+
+
+/* ==========================
+CARDS INFORMACIÓN
+========================== */
+
+
+.infoCards{
+
+
+    margin-top:60px;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+
+
+    gap:25px;
+
+
+}
+
+
+
+.card{
+
+
+    background:rgba(255,255,255,.90);
+
+
+    padding:35px 25px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(92,74,61,.12);
+
+
+    transition:.3s;
+
+
+    border:1px solid #EFE3D6;
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
+
+
+
+.icon{
+
+
+    font-size:42px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.card h3{
+
+
+    font-family:'Cormorant Garamond';
+
+
+    font-size:30px;
+
+
+    color:#8D6E63;
+
+
+}
+
+
+
+.card p{
+
+
+    color:#8B7355;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+.card strong{
+
+
+    display:block;
+
+
+    margin-top:8px;
+
+
+    color:#5C4A3D;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+/* ==========================
+CUENTA REGRESIVA
+========================== */
+
+
+.countdown{
+
+
+    text-align:center;
+
+
+    margin-top:70px;
+
+
+}
+
+
+
+.countdown h2{
+
+
+    font-family:'Cormorant Garamond';
+
+
+    font-size:40px;
+
+
+}
+
+
+
+#timer{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:18px;
+
+
+    flex-wrap:wrap;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+#timer div{
+
+
+    background:white;
+
+
+    width:100px;
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+
+}
+
+
+
+#timer h3{
+
+
+    font-size:32px;
+
+
+    color:#A67C52;
+
+
+}
+
+
+
+
+/* ==========================
+CONFIRMACIÓN
+========================== */
+
+
+.confirm{
+
+
+    text-align:center;
+
+
+    margin-top:60px;
+
+
+}
+
+
+
+.footer{
+
+
+    text-align:center;
+
+
+    margin-top:45px;
+
+
+    font-family:'Cormorant Garamond';
+
+
+    font-size:25px;
+
+
+    color:#8B7355;
+
+
+}
+
+
+
+
+/* ==========================
+MODAL
+========================== */
+
+
+#modal{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:rgba(0,0,0,.45);
+
+
+    display:none;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:200;
+
+
+}
+
+
+
+.modalContent{
+
+
+    width:90%;
+
+
+    max-width:420px;
+
+
+    background:white;
+
+
+    padding:35px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.modalContent h2{
+
+
+    font-family:'Cormorant Garamond';
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.modalContent p{
+
+
+    margin:20px 0;
+
+
+    color:#806B58;
+
+
+}
+
+
+
+.modalContent button{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    border:none;
+
+
+    border-radius:40px;
+
+
+    margin-top:12px;
+
+
+    cursor:pointer;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.yes{
+
+
+    background:#B99A7A;
+
+    color:white;
+
+
+}
+
+
+
+.no{
+
+
+    background:#E6D5C2;
+
+
+}
+
+
+
+.close{
+
+
+    background:#F3ECE4;
+
+
+}
+
+
+
+/* ==========================
+ANIMACIONES
+========================== */
+
+
+@keyframes entrada{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@keyframes fade{
+
+
+from{
+
+opacity:0;
+
+}
+
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+/* ==========================
+FOOTER CON OSITOS
+========================== */
+
+.footer-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+    
+    margin:80px auto 0; 
+
+}
+
+.footer{
+
+    width:240px;
+
+    text-align:center;
+
+    margin:0;
+
+}
+
+.footerBear{
+
+    width:150px;
+
+    flex-shrink:0;
+
+}
+
+.leftBear{
+
+    width:120px;
+
+}
+
+/* ==========================
+MÓVIL
+========================== */
+
+
+@media(max-width:700px){
+
+
+.leavesLeft,
+.leavesRight{
+
+width:150px;
+
+}
+  .footer-wrapper{
+
+        gap:10px;
+
+    }
+
+    .footer{
+
+        width:180px;
+
+        font-size:20px;
+
+    }
+
+    .footerBear{
+
+        width:150px;
+
+    }
+
+    .leftBear{
+
+        width:70px;
+
+    }
+
+
+
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+
+
+.question{
+
+font-size:65px;
+
+}
+
+
+
+.card{
+
+padding:25px;
+
+}
+
+
+}
