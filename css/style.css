@@ -913,7 +913,7 @@ width:250px;
 
     align-items:center;
 
-    gap:5px;
+    gap:1px;
 
 }
 
@@ -938,14 +938,14 @@ width:250px;
 
     .footerBear{
 
-        width:70px;
+        width:95px;
         flex-shrink:0;
 
     }
 
     .leftBear{
 
-        width:70px;
+        width:80px;
 
     }
 
