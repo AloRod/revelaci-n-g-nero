@@ -285,8 +285,8 @@ INVITACIÓN
 }
 
 .heroBear{
-
-    width:320px;
+    width:250px;
+    max-width:90%;
 
     position:relative;
 
@@ -910,6 +910,13 @@ width:150px;
 
     }
 
+    .heroBear{
+    width:230px;
+}
+  body{
+        background-size: auto 100%;
+        background-position:center top;
+    }
 
 
 
