@@ -7,17 +7,14 @@
 
 body{
 
-       min-height:100vh;
+    min-height:100vh;
+    min-height:100dvh;
 
     background-image:url("../assets/fondo2.png");
-
     background-repeat:no-repeat;
-
-    background-position:center center;
-
+    background-position:center top;
     background-size:cover;
-
-    background-attachment:scroll;
+    background-attachment:fixed;
 
     font-family:'Poppins', sans-serif;
 
@@ -26,7 +23,9 @@ body{
     overflow-x:hidden;
 
 }
-
+body.opened{
+    background-image:url("../assets/fondo2.png");
+}
 
 
 /* ==========================
@@ -109,7 +108,7 @@ PANTALLA INICIAL
 
     align-items:center;
 
-    background:rgba(248,244,238,.80);
+    background:rgba(248,244,238,.65);
 
     backdrop-filter:blur(4px);
 
@@ -250,6 +249,7 @@ INVITACIÓN
 
 #invitation{
 
+    background:transparent;
     display:none;
 
     width:100%;

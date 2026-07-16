@@ -41,7 +41,7 @@ enterButton.addEventListener("click", () => {
         welcome.style.display = "none";
 
         invitation.style.display = "block";
-
+document.body.classList.add("opened");
 
     },500);
 
