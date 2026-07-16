@@ -950,5 +950,12 @@ html, body {
     min-height:100vh;
     min-height:100dvh;
 }
+@supports (-webkit-touch-callout: none) {
+
+    body{
+        background-attachment:scroll;
+    }
+
+}
 
 }
