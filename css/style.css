@@ -8,23 +8,20 @@
 body{
 
     min-height:100vh;
-    min-height:100dvh;
-
-    background-image:url("../assets/fondo2.png");
-    background-repeat:no-repeat;
-    background-position:center top;
-    background-size:cover;
-    background-attachment:fixed;
-
+    margin:0;
     font-family:'Poppins', sans-serif;
-
     color:#5C4A3D;
-
     overflow-x:hidden;
+    position:relative;
+    background:#F8F4EE;
 
 }
-body.opened{
-    background-image:url("../assets/fondo2.png");
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url("../assets/fondo2.png") center center / cover no-repeat;
+    z-index:-1;
 }
 
 
@@ -834,6 +831,8 @@ FOOTER CON OSITOS
 
 .footer-wrapper{
 
+   
+
     display:flex;
 
     justify-content:center;
@@ -858,7 +857,7 @@ FOOTER CON OSITOS
 
 .footerBear{
 
-    width:150px;
+    width: 190px;
 
     flex-shrink:0;
 
@@ -886,13 +885,13 @@ width:150px;
 }
   .footer-wrapper{
 
-        gap:10px;
+        gap:1px;
 
     }
 
     .footer{
 
-        width:180px;
+        width: 250px;
 
         font-size:20px;
 
@@ -900,7 +899,7 @@ width:150px;
 
     .footerBear{
 
-        width:150px;
+        width:130px;
 
     }
 
@@ -914,8 +913,13 @@ width:150px;
     width:230px;
 }
   body{
-        background-size: auto 100%;
+       background-image:url("../assets/fondo2.png");
+
+        background-repeat:no-repeat;
+
         background-position:center top;
+
+        background-size:cover;
     }
 
 
@@ -950,12 +954,7 @@ html, body {
     min-height:100vh;
     min-height:100dvh;
 }
-@supports (-webkit-touch-callout: none) {
 
-    body{
-        background-attachment:scroll;
-    }
 
-}
 
 }
